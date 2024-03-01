@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .container
+    .row.justify-content-center.mt-5
+      .col-md-8
+        h1= title
+        p Contact ID: #{contact.id}
+        p First Name: #{contact.firstName}
+        p Last Name: #{contact.lastName}
+        p Email: #{contact.email}
+        p Notes: #{contact.notes}
+        p Created At: #{contact.createdAt}
+        .contact-actions 
+          a.btn.btn-danger(href=`/contacts/${contact.id}/delete`) Delete Contact
+          | 
+          a.btn.btn-primary(href=`/contacts/${contact.id}/edit`) Edit Contact

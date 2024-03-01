@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  .container
+    .row.justify-content-center.mt-5
+      .col-md-8
+        h1= title
+        p Are you sure you want to delete the following Contact?
+        hr
+        form(method='POST' action=`/contacts/${contact.id}/delete`)
+          .form-group
+            button.btn.btn-danger(type='submit') Confirm Delete
+            | 
+            a.btn.btn-secondary(href=`/contacts/${contact.id}`) Cancel

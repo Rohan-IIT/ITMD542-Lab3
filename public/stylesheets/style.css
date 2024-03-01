@@ -1,0 +1,94 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.redtext {
+  color: #cc0000;
+    background-color: #fae7e8;
+    border-color: #e45460;
+    padding: 10px;
+    border-left: 6px solid;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.form-header {
+  padding: 1rem;
+  margin-top: -3.13rem;
+  margin-bottom: 3rem;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.125rem;
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+    0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.blue.accent-1 {
+  background-color: #82b1ff !important;
+}
+
+.btn-light-blue {
+  color: #fff;
+  background-color: #82b1ff !important;
+}
+
+.waves-effect {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a.waves-effect,
+a.waves-light {
+  display: inline-block;
+}
+.show-form {
+  display: inline;
+}
+.hide-form {
+  display: none;
+}
+
+.imageCity {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.custom-w {
+  width: 50%;
+}
+
+/* Example @media query for smaller screens */
+@media screen and (max-width: 600px) {
+  .imageCity {
+    /* Adjust styles for smaller screens */
+    flex-direction: column;
+  }
+
+  .imageCity img {
+    /* Display two images side by side */
+    width: 100% !important; /* Adjust the width and spacing as needed */
+  }
+
+  .custom-w {
+    width: 100%;
+  }
+}

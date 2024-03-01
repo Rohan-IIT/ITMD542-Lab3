@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  .container
+    .row.justify-content-center.mt-5
+      .col-md-8
+        h1= title
+        p Click on input field to edit details
+        hr
+        if msg 
+          p(class='redtext')= msg
+        form(method='POST' action=`/contacts/${contact.id}/edit`)
+          .form-group
+            label(for='firstName') First Name:
+            input.form-control(type='text' name='firstName' value=contact.firstName)
+          .form-group
+            label(for='lastName') Last Name:
+            input.form-control(type='text' name='lastName' value=contact.lastName)
+          .form-group
+            label(for='email') Email:
+            input.form-control(type='email' name='email' value=contact.email)
+          .form-group
+            label(for='notes') Notes:
+            textarea.form-control(name='notes')= contact.notes
+          button.btn.btn-primary(type='submit') Save Changes
+          a.btn.btn-secondary(href='/contacts') Cancel
+
